@@ -3,28 +3,25 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
-  title = 'app';
-
   searchTerm = '';
-  isCollpased = true;
+  isCollapsed = true;
 
-  get token(){
+  get token() {
     return localStorage.getItem('token');
   }
 
-  collapse(){
-    this.isCollpased = true;
+  collapse() {
+    this.isCollapsed = true;
   }
 
-  closeDropdown(dropdown){
+  closeDropdown(dropdown) {
     dropdown.close();
   }
 
-  logout(){}
+  logout() {}
 
-  search(){}
+  search() {}
 }
